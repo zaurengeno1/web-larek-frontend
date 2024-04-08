@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use 'variables' as *;
 @use 'mixins';
 
@@ -35,3 +36,42 @@
 		}
 	}
 }
+=======
+@use "variables" as *;
+@use "mixins";
+
+.form {
+  @include mixins.flex(column);
+  gap: 1.5rem;
+  border-radius: 3rem;
+
+  &__label {
+    flex-grow: 1;
+  }
+
+  &__input {
+    background: transparent;
+    color: white;
+    border: $defaultBorder;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline-color: $secondary;
+
+    &:focus {
+      outline-style: solid;
+    }
+
+    &:invalid {
+      border-color: $error;
+      outline-color: $error;
+    }
+
+    &::placeholder {
+      color: lighten($primaryLight, 23%);
+    }
+  }
+}
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

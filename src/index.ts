@@ -1,5 +1,6 @@
 import './scss/styles.scss';
 
+<<<<<<< HEAD
 import { EventEmitter } from './components/base/events';
 import { ensureElement, cloneTemplate, createElement } from './utils/utils';
 import { AppModel, Product, CatalogChangeEvent } from './components/AppData';
@@ -243,3 +244,5 @@ events.on('modal:open', () => {
 events.on('modal:close', () => {
 	page.locked = false;
 });
+=======
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

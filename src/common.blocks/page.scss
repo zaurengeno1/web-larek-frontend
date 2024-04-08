@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 @use 'variables' as *;
 
 html,
 body.page {
+=======
+@use "variables" as *;
+
+html, body.page {
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084
 	height: 100%;
 	font-family: $font;
 	font-size: $baseFontSize;
@@ -15,4 +21,8 @@ body.page {
 	&_locked {
 		position: fixed;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

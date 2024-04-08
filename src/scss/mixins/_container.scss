@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use 'variables' as *;
 
 @mixin container($top: $defaultPadding, $bottom: $defaultPadding) {
@@ -26,3 +27,33 @@
 	grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
 	grid-gap: $gap;
 }
+=======
+@use "variables" as *;
+
+@mixin container($top: $defaultPadding, $bottom: $defaultPadding) {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: $maxPageWidth;
+  padding: $top $defaultPadding $bottom;
+}
+
+@mixin sublayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin grid($min, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  grid-gap: $gap;
+}
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

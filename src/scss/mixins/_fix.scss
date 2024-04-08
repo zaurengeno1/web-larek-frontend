@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 @mixin clearfix {
 	content: '';
+=======
+
+@mixin clearfix {
+	content: "";
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084
 	display: table;
 	clear: both;
 }
@@ -7,4 +13,8 @@
 @mixin va-fix($fix) {
 	position: relative;
 	top: $fix;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084
