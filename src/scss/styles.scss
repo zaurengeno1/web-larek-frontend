@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-@use '../vendor/normalize';
-@use '../vendor/ys-text';
-@use '../vendor/garamond';
-@use '../vendor/glyphter';
-
-@use '../common.blocks/button';
-@use '../common.blocks/form';
-@use '../common.blocks/modal';
-
-@use '../common.blocks/page';
-@use '../common.blocks/header';
-
-@use '../common.blocks/gallery';
-@use '../common.blocks/card';
-@use '../common.blocks/basket';
-@use '../common.blocks/order';
-@use '../common.blocks/order-success';
-
-@use 'variables' as *;
-@use 'mixins';
-=======
 @use "../vendor/normalize";
 @use "../vendor/ys-text";
 @use "../vendor/garamond";
@@ -41,4 +19,3 @@
 
 @use "variables" as *;
 @use "mixins";
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

@@ -1,15 +1,7 @@
 @font-face {
-<<<<<<< HEAD
-	font-family: 'Garamond';
-	src: url('./EBGaramond-Regular.woff2') format('woff2'),
-		url('./EBGaramond-Regular.ttf') format('truetype');
-	font-weight: 600;
-	font-style: normal;
-=======
     font-family: "Garamond";
     src: url("./EBGaramond-Regular.woff2") format("woff2"),
          url("./EBGaramond-Regular.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084
 }

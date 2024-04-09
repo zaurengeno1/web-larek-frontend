@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-@use 'variables' as *;
-@use 'mixins';
-
-.order {
-	@include mixins.flex(column);
-	gap: 4rem;
-	margin-bottom: 4rem;
-
-	&__field {
-		@include mixins.flex(column);
-		gap: 1.5rem;
-	}
-
-	&__buttons {
-		@include mixins.flex(row);
-		gap: 1.5rem;
-	}
-}
-=======
 @use "variables" as *;
 @use "mixins";
 
@@ -36,4 +16,3 @@
     gap: 1.5rem;
   }
 }
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

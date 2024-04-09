@@ -6,26 +6,9 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        },
-
         "prettier"
     ],
     "overrides": [
- 
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -33,12 +16,7 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
- 
-     "@typescript-eslint",
-        "react",
-
         "@typescript-eslint"
-
     ],
     "rules": {
     }

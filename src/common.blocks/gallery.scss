@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-@use 'variables' as *;
-@use 'mixins';
-
-.gallery {
-	@include mixins.container;
-	@include mixins.grid(600px, 24px);
-
-	&__item {
-		border: none;
-		border-radius: $defaultBorderRadius;
-		@include mixins.selectable($secondary, 2px, $primaryLight);
-
-		&::after {
-			border-radius: 0.8rem;
-		}
-	}
-}
-=======
 @use "variables" as *;
 @use "mixins";
 
@@ -34,4 +15,3 @@
     }
   }
 }
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

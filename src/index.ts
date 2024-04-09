@@ -1,6 +1,5 @@
 import './scss/styles.scss';
 
-<<<<<<< HEAD
 import { EventEmitter } from './components/base/events';
 import { ensureElement, cloneTemplate, createElement } from './utils/utils';
 import { AppModel, Product, CatalogChangeEvent } from './components/AppData';
@@ -26,8 +25,8 @@ const orderTemplate = ensureElement<HTMLTemplateElement>('#order');
 const contactsTemplate = ensureElement<HTMLTemplateElement>('#contacts');
 const successTemplate = ensureElement<HTMLTemplateElement>('#success');
 
-const api = new LarekAPI(CDN_URL, API_URL);
 const events = new EventEmitter();
+const api = new LarekAPI(CDN_URL, API_URL);
 const appData = new AppModel({}, events);
 const page = new Page(document.body, events);
 const modal = new Modal(ensureElement<HTMLElement>('#modal-container'), events);
@@ -244,5 +243,3 @@ events.on('modal:open', () => {
 events.on('modal:close', () => {
 	page.locked = false;
 });
-=======
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084

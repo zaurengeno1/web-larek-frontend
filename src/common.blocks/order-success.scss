@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-@use 'variables' as *;
-@use 'mixins';
-
-.order-success {
-	@include mixins.flex(column);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: 1rem;
-
-	&::before {
-		content: ' ';
-		@include mixins.background('../images/Subtract.png');
-		width: 256px;
-		height: 256px;
-	}
-
-	&__close {
-		margin-top: 2rem;
-	}
-}
-=======
 @use "variables" as *;
 @use "mixins";
 
@@ -42,4 +19,3 @@
     margin-top: 2rem;
   }
 }
->>>>>>> 7db40e7b8fcbe4204fd107149b94be33dba44084
