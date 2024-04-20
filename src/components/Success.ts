@@ -1,5 +1,5 @@
-import { Component } from '../base/Component';
-import { ensureElement, formatNumber } from '../../utils/utils';
+import { Component } from './base/Component';
+import { ensureElement, formatNumber } from '../utils/utils';
 
 // Определение интерфейса для данных компонента Success
 interface ISuccess {
@@ -27,7 +27,7 @@ export class Success extends Component<ISuccess> {
 			this.container
 		);
 		// Установка текста с общей суммой и добавление обработчика события клика
-		this._total.textContent = 'Списано ' + formatNumber(total) + ' синапсов';
+		this.setText(this._total, 'Списано ' + formatNumber(total) + ' синапсов');
 		this._close.addEventListener('click', actions.onClick);
 	}
 }

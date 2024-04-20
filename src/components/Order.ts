@@ -1,6 +1,6 @@
 import { Form } from './common/Form';
 import { IOrderAddress } from '../types';
-import { IEvents } from './base/events';
+import { IEvents } from './base/Events';
 
 export class OrderAddress extends Form<IOrderAddress> {
 	protected _buttons: HTMLButtonElement[];

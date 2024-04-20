@@ -1,5 +1,5 @@
 import { Model } from './base/Model';
-import { IEvents } from '../components/base/events';
+import { IEvents } from './base/Events';
 import {
 	FormErrors,
 	IAppStateModel,

@@ -2,6 +2,7 @@ import { Component } from './base/Component';
 import { IProductItem, ICardActions } from '../types';
 import { ensureElement, formatNumber } from '../utils/utils';
 import { cardCategory } from '../utils/constants';
+import { BasketCard } from './BasketCard';
 
 // Определение типа ICard, расширяющего IProductItem новыми свойствами
 export type ICard = IProductItem & {
@@ -64,9 +65,8 @@ export class Card extends Component<ICard> {
 			this.setText(this._price, `${formatNumber(value)} синапсов`);
 		} else {
 			this.setText(this._price, 'Бесценно');
-			if (this._button) {
-				this._button.setAttribute('disabled', '');
-			}
+			this.setDisabled(this._button, true);
+			this.setText(this._button, 'Нельзя купить');
 		}
 	}
 
@@ -79,7 +79,6 @@ export class Card extends Component<ICard> {
 		this.setText(this._category, value);
 		this._category.classList.add('card__category' + cardCategory[value]);
 	}
-
 	set button(value: string) {
 		this.setText(this._button, value);
 	}

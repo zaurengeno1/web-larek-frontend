@@ -1,6 +1,6 @@
 import { Component } from '../base/Component';
 import { ensureElement } from '../../utils/utils';
-import { IEvents } from '../base/events';
+import { IEvents } from '../base/Events';
 
 // Определение интерфейса данных для модального окна
 interface IModalData {
@@ -35,13 +35,13 @@ export class Modal extends Component<IModalData> {
 
 	// Метод для открытия модального окна
 	open() {
-		this.container.classList.add('modal_active');
+		this.toggleClass(this.container, 'modal_active', true);
 		this.events.emit('modal:open');
 	}
 
 	// Метод для закрытия модального окна
 	close() {
-		this.container.classList.remove('modal_active');
+		this.toggleClass(this.container, 'modal_active', false);
 		this.content = null; // Очистка содержимого при закрытии
 		this.events.emit('modal:close');
 	}

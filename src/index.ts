@@ -1,20 +1,18 @@
 import './scss/styles.scss';
-
-import { EventEmitter } from './components/base/events';
+import { EventEmitter } from './components/base/Events';
 import { ensureElement, cloneTemplate, createElement } from './utils/utils';
 import { AppModel, Product, CatalogChangeEvent } from './components/AppData';
 import { LarekAPI } from './components/LarekApi';
 import { API_URL, CDN_URL } from './utils/constants';
 import { Card } from './components/Card';
 
-import { Api } from './components/base/api';
 import { Page } from './components/Page';
 import { Modal } from './components/common/Modal';
-import { Basket } from './components/common/Basket';
-import { BasketCard } from './components/common/BasketCard';
+import { Basket } from './components/Basket';
+import { BasketCard } from './components/BasketCard';
 import { OrderAddress } from './components/Order';
-import { ContactsOrder } from './components/Contacts';
-import { Success } from './components/common/Success';
+import { Contacts } from './components/Contacts';
+import { Success } from './components/Success';
 import { IContactsOrder, IOrderAddress, PaymentMethod } from './types';
 
 const cardCatalogTemplate = ensureElement<HTMLTemplateElement>('#card-catalog');
@@ -32,7 +30,7 @@ const page = new Page(document.body, events);
 const modal = new Modal(ensureElement<HTMLElement>('#modal-container'), events);
 const basket = new Basket(cloneTemplate(basketTemplate), events);
 const order = new OrderAddress(cloneTemplate(orderTemplate), events);
-const contacts = new ContactsOrder(cloneTemplate(contactsTemplate), events);
+const contacts = new Contacts(cloneTemplate(contactsTemplate), events);
 
 // Получаем лоты с сервера, заполняем модель данных о катологе
 
@@ -81,7 +79,8 @@ events.on('preview:change', (item: Product) => {
 				description: item.description,
 				image: item.image,
 				price: item.price,
-				button: appData.productOrdered(item) ? 'Убрать' : 'Купить',
+
+				button: appData.productOrdered(item) ? 'Удалить из корзины' : 'Купить',
 			}),
 		});
 	} else {
