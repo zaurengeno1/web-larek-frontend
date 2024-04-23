@@ -2,7 +2,6 @@ import { Component } from './base/Component';
 import { IProductItem, ICardActions } from '../types';
 import { ensureElement, formatNumber } from '../utils/utils';
 import { cardCategory } from '../utils/constants';
-import { BasketCard } from './BasketCard';
 
 // Определение типа ICard, расширяющего IProductItem новыми свойствами
 export type ICard = IProductItem & {
@@ -77,8 +76,14 @@ export class Card extends Component<ICard> {
 
 	set category(value: string) {
 		this.setText(this._category, value);
-		this._category.classList.add('card__category' + cardCategory[value]);
+
+		this.toggleClass(
+			this._category,
+			'card__category' + cardCategory[value],
+			true
+		);
 	}
+
 	set button(value: string) {
 		this.setText(this._button, value);
 	}

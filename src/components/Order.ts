@@ -18,16 +18,20 @@ export class OrderAddress extends Form<IOrderAddress> {
 		);
 	}
 
+	// setButtonClass(name: string): void {
+	// 	this._buttons.forEach((button) => {
+	// 		if (button.name === name) {
+	// 			this.toggleClass(button, 'button_alt-active');
+	// 		} else {
+	// 			this.toggleClass(button, 'button_alt-inactive');
+	// 		}
+	// 	});
+	// }
 	setButtonClass(name: string): void {
 		this._buttons.forEach((button) => {
-			if (button.name === name) {
-				button.classList.add('button_alt-active');
-			} else {
-				button.classList.remove('button_alt-active');
-			}
+			this.toggleClass(button, 'button_alt-active', button.name === name);
 		});
 	}
-
 	set address(address: string) {
 		(this.container.elements.namedItem('address') as HTMLInputElement).value =
 			address;
